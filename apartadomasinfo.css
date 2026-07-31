@@ -1,0 +1,448 @@
+:root{
+    --bg:#fff7f0;
+    --paper:#ffffff;
+    --ink:#1b1b1b;
+    --ink-soft:#5b544d;
+    --orange:#ff5a1f;
+    --orange-dark:#e0440c;
+    --navy:#16305c;
+    --line:#ece2d6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    background-image:
+        radial-gradient(circle at 100% 0%,rgba(255,90,31,.08),transparent 45%),
+        radial-gradient(circle at 0% 100%,rgba(22,48,92,.06),transparent 40%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.logo{
+    width:150px;
+    margin:20px auto;
+}
+
+header.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px clamp(20px,5vw,56px);
+    border-bottom:1px solid var(--line);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-mark{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid var(--navy);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--paper);
+}
+
+.brand-mark svg{
+    width:22px;
+    height:22px;
+}
+
+.brand-name{
+    font-family:'Space Grotesk',sans-serif;
+    line-height:1;
+}
+
+.brand-name b{
+    display:block;
+    font-size:17px;
+}
+
+.brand-name span{
+    display:block;
+    font-size:12px;
+    color:var(--orange);
+    font-weight:600;
+    letter-spacing:1.5px;
+}
+
+.top nav{
+    font-size:13px;
+    color:var(--ink-soft);
+    font-weight:600;
+}
+
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.product{
+    width:100%;
+    max-width:900px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:35px;
+    align-items:center;
+    box-shadow:0 20px 50px -30px rgba(22,48,92,.35);
+}
+
+.eyebrow{
+    display:inline-block;
+    padding:5px 12px;
+    background:rgba(22,48,92,.08);
+    border-radius:999px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.specs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.spec-pill{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:8px 14px;
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+}
+
+.spec-pill em{
+    color:var(--orange-dark);
+    font-style:normal;
+    margin-right:6px;
+}
+
+.tag-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.tag-string{
+    width:2px;
+    height:35px;
+    background:var(--ink-soft);
+    opacity:.4;
+}
+
+.price-tag{
+    position:relative;
+    width:190px;
+    background:var(--orange);
+    color:#fff;
+    padding:26px 18px;
+    border-radius:14px 14px 14px 60px;
+    transform:rotate(4deg);
+    box-shadow:0 18px 30px -14px rgba(224,68,12,.6);
+}
+
+.price-tag::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:18px;
+    width:14px;
+    height:14px;
+    background:var(--bg);
+    border-radius:50%;
+}
+
+.price-tag .label{
+    display:block;
+    margin-left:16px;
+    font-size:11px;
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:1.5px;
+}
+
+.price-tag .amount{
+    display:block;
+    margin-left:12px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:34px;
+    font-weight:700;
+}
+
+.especificaciones{
+    margin:20px auto 0;
+    width:100%;
+    max-width:420px;
+    background:#FF6B2B;
+    border-radius:12px;
+    padding:18px;
+    color:#1b1b1b;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.btn-volver{
+    background:#ff6b3d;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:12px 22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-volver:hover{
+    background:#e55a2d;
+}
+
+.btn-primary2{
+    display:inline-block;
+    margin:40px auto;
+    background:var(--orange);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.final-cta{
+    text-align:center;
+}
+
+footer{
+    border-top:1px solid var(--line);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    text-align:center;
+}
+
+.note{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding-bottom:20px;
+}
+/* =======================================
+   RESPONSIVE TABLETS
+======================================= */
+@media (max-width:992px){
+
+    header.top{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .product{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+        padding:30px;
+    }
+
+    .tag-wrap{
+        align-items:center;
+    }
+
+    .price-tag{
+        transform:none;
+    }
+
+    .logo{
+        width:130px;
+    }
+
+    .specs{
+        justify-content:center;
+    }
+
+    .btn-volver,
+    .btn-primary2{
+        display:block;
+        width:100%;
+        max-width:320px;
+        margin:20px auto;
+        text-align:center;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+}
+
+
+/* =======================================
+   RESPONSIVE CELULARES
+======================================= */
+@media (max-width:600px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    main{
+        padding:15px;
+    }
+
+    .product{
+        padding:20px;
+        border-radius:16px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .specs{
+        justify-content:center;
+    }
+
+    .spec-pill{
+        width:100%;
+        text-align:center;
+        font-size:12px;
+    }
+
+    .tag-wrap{
+        width:100%;
+    }
+
+    .tag-string{
+        width:34px;
+        height:2px;
+    }
+
+    .price-tag{
+        width:100%;
+        max-width:250px;
+        padding:20px;
+        transform:none;
+    }
+
+    .price-tag .amount{
+        font-size:28px;
+    }
+
+    .especificaciones{
+        width:100%;
+        max-width:100%;
+        font-size:14px;
+        padding:15px;
+        margin-top:20px;
+    }
+
+    .btn-volver,
+    .btn-primary2{
+        width:100%;
+        max-width:100%;
+    }
+
+}
+
+
+/* =======================================
+   CELULARES PEQUEÑOS
+======================================= */
+@media (max-width:480px){
+
+    .logo{
+        width:110px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .eyebrow{
+        font-size:11px;
+    }
+
+    .price-tag{
+        max-width:220px;
+    }
+
+    .price-tag .amount{
+        font-size:24px;
+    }
+
+    .price-tag .label{
+        font-size:10px;
+    }
+
+    .especificaciones{
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    footer{
+        font-size:12px;
+    }
+
+    .note{
+        font-size:11px;
+        padding:15px;
+    }
+
+}
+
+
+/* =======================================
+   PANTALLAS GRANDES
+======================================= */
+@media (min-width:1200px){
+
+    .product{
+        max-width:1000px;
+    }
+
+    h1{
+        font-size:44px;
+    }
+
+    .price-tag{
+        width:210px;
+    }
+
+}
